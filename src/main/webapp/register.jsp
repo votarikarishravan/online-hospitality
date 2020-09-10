@@ -17,7 +17,7 @@
 					<div class="account-content p-5">
 						<div class="row align-items-center justify-content-center">
 							<div class="col-md-7 col-lg-6 login-left">
-								<img src="HMS-logo.png" class="img-fluid" alt="Doccure Register">
+								<img src="images/HMS-logo.png" class="img-fluid" alt="Doccure Register">
 							</div>
 							<div class="col-md-12 col-lg-6 login-right mx-auto">
 								<div class="login-header ">

@@ -20,7 +20,7 @@
 					<div class="account-content ">
 						<div class="row align-items-center justify-content-center ">
 							<div class="col-md-7 col-lg-6 login-left">
-								<img src="HMS-logo.png" class="img-fluid" alt="Doccure Login">
+								<img src="images/HMS-logo.png" class="img-fluid" alt="Doccure Login">
 							</div>
 							<div class="col-md-12 col-lg-6 login-right border rounded my-5">
 								<div class="login-header py-4">
