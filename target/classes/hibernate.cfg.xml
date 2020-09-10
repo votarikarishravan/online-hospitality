@@ -20,7 +20,6 @@
 		<mapping class="com.shravan.hms.model.Doctor"/>
 		<mapping class="com.shravan.hms.model.Appointment"/> 
 		<mapping class="com.shravan.hms.model.Receptionist"/>  
-		<!-- <mapping class="com.shravan.hms.model.User"/>
-		<mapping class="com.shravan.hms.model.Vehicle"/> --> 
+
 	</session-factory>
 </hibernate-configuration>
