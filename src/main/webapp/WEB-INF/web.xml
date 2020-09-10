@@ -1,0 +1,189 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <param-name>host</param-name>
+    <param-value>smtp.gmail.com</param-value>
+</context-param>
+ 
+<context-param>
+    <param-name>port</param-name>
+    <param-value>587</param-value>
+</context-param>
+ 
+<context-param>
+    <param-name>email</param-name>
+    <param-value>shravan.vmd@gmail.com</param-value>
+</context-param>
+<context-param>
+    <param-name>name</param-name>
+    <param-value>shravan</param-value>
+</context-param>
+<context-param>
+    <param-name>pass</param-name>
+    <param-value>shravan@1995</param-value>
+</context-param>
+  <servlet>
+  	<servlet-name>RegisterPatient</servlet-name>
+  	<display-name>RegisterPatient</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.RegisterPatient</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PatientLoginController</servlet-name>
+  	<display-name>PatientLoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.PatientLoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SavePatientProfile</servlet-name>
+  	<display-name>SavePatientProfile</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.SavePatientProfile</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveAdminProfile</servlet-name>
+  	<display-name>SaveAdminProfile</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.SaveAdminProfile</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ResetPasswordServlet</servlet-name>
+  	<display-name>ResetPasswordServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.ResetPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdatePatientPassword</servlet-name>
+  	<display-name>UpdatePatientPassword</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.UpdatePatientPassword</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ChangePasswordServlet</servlet-name>
+  	<display-name>ChangePasswordServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.ChangePasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<display-name>LogOutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminLoginController</servlet-name>
+  	<display-name>AdminLoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.AdminLoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RegisterDoctor</servlet-name>
+  	<display-name>RegisterDoctor</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.RegisterDoctor</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BookAppointment</servlet-name>
+  	<display-name>BookAppointment</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.BookAppointment</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RegisterReceptionist</servlet-name>
+  	<display-name>RegisterReceptionist</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.RegisterReceptionist</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DoctorLogin</servlet-name>
+  	<display-name>DoctorLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.DoctorLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateAppoint</servlet-name>
+  	<display-name>UpdateAppoint</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.UpdateAppoint</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveDoctor</servlet-name>
+  	<display-name>RemoveDoctor</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.RemoveDoctor</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteReception</servlet-name>
+  	<display-name>DeleteReception</display-name>
+  	<description></description>
+  	<servlet-class>com.shravan.hms.controller.DeleteReception</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegisterPatient</servlet-name>
+  	<url-pattern>/RegisterPatient</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PatientLoginController</servlet-name>
+  	<url-pattern>/PatientLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SavePatientProfile</servlet-name>
+  	<url-pattern>/SavePatientProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveAdminProfile</servlet-name>
+  	<url-pattern>/SaveAdminProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ResetPasswordServlet</servlet-name>
+  	<url-pattern>/reset_password</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdatePatientPassword</servlet-name>
+  	<url-pattern>/UpdatePatientPassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChangePasswordServlet</servlet-name>
+  	<url-pattern>/ChangePassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<url-pattern>/LogOut</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminLoginController</servlet-name>
+  	<url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RegisterDoctor</servlet-name>
+  	<url-pattern>/RegisterDoctor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BookAppointment</servlet-name>
+  	<url-pattern>/BookAppointment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RegisterReceptionist</servlet-name>
+  	<url-pattern>/RegisterReceptionist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DoctorLogin</servlet-name>
+  	<url-pattern>/DoctorLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateAppoint</servlet-name>
+  	<url-pattern>/UpdateAppoint</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveDoctor</servlet-name>
+  	<url-pattern>/RemoveDoctor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReception</servlet-name>
+  	<url-pattern>/DeleteReception</url-pattern>
+  </servlet-mapping>
+</web-app>

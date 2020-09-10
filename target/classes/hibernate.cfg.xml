@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/testdb</property>
+		<property name="connection.username">shravan</property>
+		<property name="connection.password">mysql123</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<mapping class="com.shravan.hms.model.Patient"/>
+		<mapping class="com.shravan.hms.model.PatientProfile"/>
+		<mapping class="com.shravan.hms.model.Admin"/>
+		<mapping class="com.shravan.hms.model.AdminProfile"/>
+		<mapping class="com.shravan.hms.model.Doctor"/>
+		<mapping class="com.shravan.hms.model.Appointment"/> 
+		<mapping class="com.shravan.hms.model.Receptionist"/>  
+		<!-- <mapping class="com.shravan.hms.model.User"/>
+		<mapping class="com.shravan.hms.model.Vehicle"/> --> 
+	</session-factory>
+</hibernate-configuration>
