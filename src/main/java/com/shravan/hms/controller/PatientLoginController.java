@@ -73,6 +73,7 @@ public class PatientLoginController extends HttpServlet {
 				e.printStackTrace();
 			}
         } else {
+        	request.setAttribute("message", "incorrect credentials... please enter valid details");
         	response.sendRedirect("login.jsp");
         	throw new Exception("Login not successful..");
         }

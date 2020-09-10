@@ -25,23 +25,28 @@
 								</div>
 
 								<!-- Register Form -->
-								<form action="RegisterPatient" method="post">
+								<form action="RegisterPatient" method="post" onsubmit="return validateform()">
 									<div class="form-group form-focus">
-										<input type="text" class="form-control floating" name="name">
+										<input type="text" class="form-control floating" name="name" required="required">
 										<label class="focus-label">Name</label>
 									</div>
 									<div class="form-group form-focus">
-										<input type="text" class="form-control floating"
+										<input type="text" class="form-control floating" required="required"
 											name="mobileNumber"> <label class="focus-label">Mobile
 											Number</label>
 									</div>
 									<div class="form-group form-focus">
-										<input type="email" class="form-control floating" name="email">
+										<input type="email" class="form-control floating" name="email" id="pemail" required="required">
 										<label class="focus-label">Email Id</label>
 									</div>
 									<div class="form-group form-focus">
-										<input type="password" class="form-control floating"
+										<input type="password" class="form-control floating" required="required" id="ppassword"
 											name="password"> <label class="focus-label">Create
+											Password</label>
+									</div>
+									<div class="form-group form-focus">
+										<input type="password" class="form-control floating" required="required" id="pConfirmPassword"
+											> <label class="focus-label">Confirm
 											Password</label>
 									</div>
 									<div class="text-right">
