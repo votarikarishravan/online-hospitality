@@ -30,7 +30,7 @@ public class AppointmentDao {
 	public List<Appointment> getCurrentDayAppointment() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 
-		List<Appointment> list = session.createQuery("FROM Appointment A WHERE A.bookingDate =now()")
+		List<Appointment> list = session.createQuery("FROM Appointment A WHERE A.bookingDate =CURRENT_DATE")
 				.getResultList();
 
 		return list;
