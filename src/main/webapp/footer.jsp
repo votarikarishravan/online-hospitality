@@ -46,7 +46,7 @@ ul li a {
 						<div class="footer-about-content mt-2">
 
 							<div class="social-icon">
-								<ul style="list-style: none;">
+								<ul style="list-style: none;" class="social-icon-ul">
 									<li><a href="#" target="_blank"><img
 											src="https://img.icons8.com/nolan/40/facebook.png" /> </a></li>
 									<li><a href="#" target="_blank"><img

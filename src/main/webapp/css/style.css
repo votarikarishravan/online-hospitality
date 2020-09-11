@@ -1,6 +1,7 @@
 *{
 	font:Poppins,sans-serif;
 }
+
 body {
 	background-color: #f8f9fa;
 	color: #272b41;
@@ -9,7 +10,9 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
-
+.social-icon-ul li{
+	display:inline;
+}
 .active-hover:hover {
 	cursor: pointer;
 }
