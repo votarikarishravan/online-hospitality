@@ -58,11 +58,16 @@ public class RegisterPatient extends HttpServlet {
         patient.setMobileNumber(mobileNumber);
         patient.setEmail(email);
         patient.setPassword(password);
-        
+        try {
         patient.setPatientProfile(pProfile);
         
         patientDao.savePatient(patient);
-              
+        }catch ( Exception e) {
+        	System.out.println("LOG : ----------------------");
+			e.printStackTrace();
+			request.setAttribute("Emessage", "you are already registered here");
+			request.getRequestDispatcher("register.jsp").forward(request, response);;
+		} 
         RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
         dispatcher.forward(request, response);
     }
