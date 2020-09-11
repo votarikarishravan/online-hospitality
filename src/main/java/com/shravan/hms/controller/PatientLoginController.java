@@ -67,8 +67,8 @@ public class PatientLoginController extends HttpServlet {
           	request.getRequestDispatcher("patient-dashboard.jsp").forward(request, response);
 			
         } else {
-        	request.setAttribute("message", "incorrect credentials... please enter valid details");
-        	request.getRequestDispatcher("login.jsp");
+        	request.setAttribute("message", "incorrect patient email or password...");
+        	request.getRequestDispatcher("login.jsp").forward(request, response);;
         }
     }
 	

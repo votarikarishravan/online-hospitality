@@ -9,9 +9,11 @@ function validateform() {
   var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   if (password.length < 6) {
-    alert("Password must be at least 6 characters long.");
+    alert("Password must be at least 6 characters and not more than 16 characters.");
     return false;
-  } else if (mailformat.test(email) == false) {
+  }else if( password.length > 16){
+    alert("password should not be more than 16 characters")
+  }else if (mailformat.test(email) == false) {
     alert("Enter a valid mail address");
     return false;
   }

@@ -8,19 +8,19 @@
 			<div class="collapse navbar-collapse " id="navbarSupportedContent">
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-				  <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+				  <a class="nav-link  text-primary" href="index.jsp">Home <span class="sr-only">(current)</span></a>
 				</li>
 				  <li class="nav-item">
-					<a class="nav-link" href="home-book-appointment.jsp">Book Appointment</a>
+					<a class="nav-link text-info" href="home-book-appointment.jsp">Book Appointment</a>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle text-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Administration
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="admin-login.jsp">Admin</a>
-					  <a class="dropdown-item" href="doctor-login.jsp">Doctor</a>
-					  <a class="dropdown-item" href="reception-login.jsp">Rececptionist</a>
+					  <a class="dropdown-item text-info" href="admin-login.jsp">Admin</a>
+					  <a class="dropdown-item text-info" href="doctor-login.jsp">Doctor</a>
+					  <a class="dropdown-item text-info" href="reception-login.jsp">Rececptionist</a>
 					</div>
 				  </li>
 				 

@@ -26,27 +26,32 @@
 								<form action="RegisterReceptionist">
 
 									<div class="form-group form-focus">
-										<input type="text" class="form-control floating" name="id">
 										<label class="focus-label"> Id</label>
+										<input type="text" class="form-control floating" name="id">
+										
 									</div>
 									<div class="form-group form-focus">
-										<input type="text" class="form-control floating" name="name">
 										<label class="focus-label">Receptionist Name</label>
+										<input type="text" class="form-control floating" name="name">
+										
 									</div>
 
 									<div class="form-group form-focus">
-										<input type="text" class="form-control floating"
-											name="mobile"> <label class="focus-label">Mobile
+									<label class="focus-label">Mobile
 											Number</label>
+										<input type="text" class="form-control floating"
+											name="mobile"> 
 									</div>
 									<div class="form-group form-focus">
-										<input type="email" class="form-control floating" name="email">
 										<label class="focus-label">Email Id</label>
+										<input type="email" class="form-control floating" name="email">
+										
 									</div>
 									<div class="form-group form-focus">
-										<input type="password" class="form-control floating"
-											name="password"> <label class="focus-label">Create
+									<label class="focus-label">Create
 											Password</label>
+										<input type="password" class="form-control floating"
+											name="password"> 
 									</div>
 									<button class="btn btn-primary btn-block btn-lg login-btn"
 										type="submit">Register</button>

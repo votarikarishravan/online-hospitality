@@ -13,24 +13,25 @@
             <div class="col-md-8 offset-md-2">
                 
                 <!-- Account Content -->
-                <div class="account-content">
+                <div class="account-content mb-5">
                     <div class="row align-items-center justify-content-center">
-                        <div class="col-md-7 col-lg-6 login-left">
-                            <img src="HMS-logo.png" class="img-fluid" alt="Login Banner">	
+                        <div class="col-md-7 col-lg-6">
+                            <img src="images/HMS-logo.png" class="img-fluid" alt="Login Banner">	
                         </div>
-                        <div class="col-md-12 col-lg-6 login-right">
+                        <div class="col-md-12 col-lg-6">
                             <div class="login-header">
                                 <h3>Forgot Password?</h3>
-                                <p class="small text-muted">Enter your email to get a password reset password</p>
+                                <p class="small text-muted">Enter your email to get a reset password</p>
                             </div>
                             
                             <!-- Forgot Password Form -->
                             <form action="reset_password">
                                 <div class="form-group form-focus">
-                                    <input type="email" class="form-control floating" name="email">
                                     <label class="focus-label">Email</label>
+                                    <input type="email" class="form-control floating" name="email">
+                                    
                                 </div>
-                                <div class="text-right">
+                                <div class="text-right mb-2">
                                     <a class="forgot-link" href="login.jsp">Remember your password?</a>
                                 </div>
                                 <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Reset Password</button>

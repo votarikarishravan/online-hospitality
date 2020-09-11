@@ -38,25 +38,27 @@
 								</div>
 								<form action="PatientLogin" method="post" onsubmit="return validateform()">
 									<div class="form-group form-focus">
+									<label
+											class="focus-label">Email</label>
 										<input id="pemail" type="email" class="form-control floating"
 											name="email" required="required"
-											onsubmit="return validateform()"> <label
-											class="focus-label">Email</label>
+											onsubmit="return validateform()"> 
 									</div>
 									<div class="form-group form-focus">
+										<label class="focus-label">Password</label>
 										<input id="ppassword" type="password"
 											class="form-control floating" name="password"
-											required="required"> <label class="focus-label">Password</label>
+											required="required"> 
 									</div>
-									<div class="text-right">
+									<div class="text-right mb-2">
 										<a class="forgot-link" href="forgot-password.jsp">Forgot
 											Password ?</a>
 									</div>
 									<button class="btn btn-primary btn-block btn-lg login-btn"
 										type="submit">Login</button>
 
-									<div class="text-center dont-have">
-										Don’t have an account? <a href="register.jsp">Register</a>
+									<div class="text-center dont-have mt-2">
+										Don't have an account? <a href="register.jsp">Register</a>
 									</div>
 								</form>
 							</div>

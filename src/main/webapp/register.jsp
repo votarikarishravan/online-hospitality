@@ -23,7 +23,7 @@
 							</div>
 							<div class="col-md-12 col-lg-6 login-right mx-auto">
 								<div class="login-header ">
-									<h3 class="p-3">Patient Register</h3>
+									<h5 class="p-3 bg-info text-white">Patient Register</h5>
 									<%
 										String msg = (String) request.getAttribute("Emessage");
 										if (msg != null) {
@@ -38,28 +38,33 @@
 								<form action="RegisterPatient" method="post"
 									onsubmit="return validateform()">
 									<div class="form-group form-focus">
+									<label class="focus-label">Name</label>
 										<input type="text" class="form-control floating" name="name"
-											required="required"> <label class="focus-label">Name</label>
+											required="required"> 
 									</div>
 									<div class="form-group form-focus">
-										<input type="text" class="form-control floating"
-											required="required" name="mobileNumber"> <label
+									<label
 											class="focus-label">Mobile Number</label>
+										<input type="text" class="form-control floating"
+											required="required" name="mobileNumber"> 
 									</div>
 									<div class="form-group form-focus">
-										<input type="email" class="form-control floating" name="email"
-											id="pemail" required="required"> <label
+									 <label
 											class="focus-label">Email Id</label>
+										<input type="email" class="form-control floating" name="email"
+											id="pemail" required="required">
 									</div>
 									<div class="form-group form-focus">
-										<input type="password" class="form-control floating"
-											required="required" id="ppassword" name="password"> <label
+									<label
 											class="focus-label">Create Password</label>
+										<input type="password" class="form-control floating"
+											required="required" id="ppassword" name="password"> 
 									</div>
 									<div class="form-group form-focus">
+									<label class="focus-label">Confirm Password</label>
 										<input type="password" class="form-control floating"
 											required="required" id="pConfirmPassword">
-										<label class="focus-label">Confirm Password</label>
+										
 									</div>
 									<div class="text-right">
 										<a class="forgot-link" href="login.jsp">Already have an

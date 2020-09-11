@@ -7,7 +7,9 @@
 	color: whitesmoke;
 	display: block;
 }
-
+.social-icon-ul li{
+	display:inline-block;
+	}
 ul li a {
 	color: #ffffff;
 }

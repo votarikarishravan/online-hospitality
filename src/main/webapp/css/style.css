@@ -10,9 +10,7 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
-.social-icon-ul li{
-	display:inline;
-}
+
 .active-hover:hover {
 	cursor: pointer;
 }
