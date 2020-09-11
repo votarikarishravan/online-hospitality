@@ -7,7 +7,7 @@
 	<session-factory> 
 		
 		<property name="connection.driver_class">org.postgresql.Driver</property>
-		<property name="connection.url">postgres://qxonqyumlfonuy:957f407ed75c8777d0c82f7ca52473e243c798dd2872731fe8cdbbe2cae49297@ec2-54-146-91-153.compute-1.amazonaws.com:5432/d4v4309kulboqu</property>
+		<property name="connection.url">jdbc:postgresql://ec2-54-146-91-153.compute-1.amazonaws.com:5432/d4v4309kulboqu</property>
 		<property name="connection.username">qxonqyumlfonuy</property>
 		<property name="connection.password">957f407ed75c8777d0c82f7ca52473e243c798dd2872731fe8cdbbe2cae49297</property>
 		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
