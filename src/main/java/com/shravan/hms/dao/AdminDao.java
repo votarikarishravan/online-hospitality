@@ -11,7 +11,7 @@ public class AdminDao {
 	public static Admin getAdmin() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 
-		Admin admin = session.get(Admin.class,001);
+		Admin admin = session.get(Admin.class,1995);
 
 		return admin;
 	}
@@ -25,7 +25,7 @@ public class AdminDao {
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 
 			transaction = session.beginTransaction();
-			admin = session.get(Admin.class, 001);
+			admin = session.get(Admin.class, 1995);
 
 			if (admin != null && admin.getPassword().equals(password)) {
 				return true;

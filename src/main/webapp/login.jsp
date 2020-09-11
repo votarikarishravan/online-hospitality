@@ -28,7 +28,7 @@
 									String msg = (String) request.getAttribute("message");
 										if (msg != null) {
 									%>
-									<span class="text-danger"><%=msg %></span>
+									<span class="text-danger"><%=msg%></span>
 									<%
 										}
 									%>
