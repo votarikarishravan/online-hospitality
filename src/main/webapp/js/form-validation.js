@@ -83,3 +83,13 @@ function changePasswordValidate(){
 		return false;
 	}
 }
+
+function profileValidation() {
+	var oFile = document.getElementById("fileUpload").files[0];
+
+    if (oFile.size > 2097152) // 2 mb for bytes.
+    {
+        alert("Image size exceeds 2 MB");
+        return false;
+    }
+}

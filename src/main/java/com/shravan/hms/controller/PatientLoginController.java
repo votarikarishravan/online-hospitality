@@ -43,26 +43,38 @@ public class PatientLoginController extends HttpServlet {
 	private void authenticate(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String email = request.getParameter("email");
         String password = request.getParameter("password");
+        HttpSession session = request.getSession();
+        
         
         if (patientDao.validate(email, password)) {
         	
-        	HttpSession session = request.getSession();
         	session.setAttribute("patientEmail", email);
         	
         	Patient patient = patientDao.getPatient(email);
         	
         	session.setAttribute("patientId", patient.getMobileNumber());
-          	session.setAttribute("patientFullName", patient.getName());
-          	session.setAttribute("patientFirstName", patient.getPatientProfile().getPatientFirstName());
-          	session.setAttribute("patientLastName", patient.getPatientProfile().getPatientLastName());
-          	session.setAttribute("patientDob", patient.getPatientProfile().getPatientDob());
-          	session.setAttribute("patientBloodGroup", patient.getPatientProfile().getPatientBloodGroup());
-          	session.setAttribute("patientMobile", patient.getMobileNumber());
-          	session.setAttribute("patientAddress", patient.getPatientProfile().getPatientAddress());
-          	session.setAttribute("patientCity", patient.getPatientProfile().getPatientCity());
-          	session.setAttribute("patientState", patient.getPatientProfile().getPatientState());
-          	session.setAttribute("patientZip", patient.getPatientProfile().getPatientZip());
-          	session.setAttribute("patientCountry", patient.getPatientProfile().getPatientCountry());
+			/*
+			 * session.setAttribute("patientFullName", patient.getName());
+			 * session.setAttribute("patientFirstName",
+			 * patient.getPatientProfile().getPatientFirstName());
+			 * session.setAttribute("patientLastName",
+			 * patient.getPatientProfile().getPatientLastName());
+			 * session.setAttribute("patientDob",
+			 * patient.getPatientProfile().getPatientDob());
+			 * session.setAttribute("patientBloodGroup",
+			 * patient.getPatientProfile().getPatientBloodGroup());
+			 * session.setAttribute("patientMobile", patient.getMobileNumber());
+			 * session.setAttribute("patientAddress",
+			 * patient.getPatientProfile().getPatientAddress());
+			 * session.setAttribute("patientCity",
+			 * patient.getPatientProfile().getPatientCity());
+			 * session.setAttribute("patientState",
+			 * patient.getPatientProfile().getPatientState());
+			 * session.setAttribute("patientZip",
+			 * patient.getPatientProfile().getPatientZip());
+			 * session.setAttribute("patientCountry",
+			 * patient.getPatientProfile().getPatientCountry());
+			 */
         	
           	request.getRequestDispatcher("patient-dashboard.jsp").forward(request, response);
 			

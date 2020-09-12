@@ -1,3 +1,6 @@
+<%@page import="com.shravan.hms.model.PatientProfile"%>
+<%@page import="com.shravan.hms.model.Patient"%>
+<%@page import="com.shravan.hms.dao.PatientDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
@@ -6,6 +9,12 @@
 <jsp:include page="header.jsp"></jsp:include>
 <body>
 	<jsp:include page="navbar-patient.jsp"></jsp:include>
+	<%
+	PatientDao dao = new PatientDao();
+	PatientProfile pProfile = new PatientProfile();
+	Long mobile =(Long)session.getAttribute("patientId");
+	pProfile = dao.getPatientById(mobile).getPatientProfile();
+	%>
 
 	<!-- Page Content -->
 	<div class="content">
@@ -21,7 +30,7 @@
 
 							<!-- Profile Settings Form -->
 							<form action="SavePatientProfile" method="post"
-								enctype="multipart/form-data">
+								enctype="multipart/form-data" onsubmit="return profileValidation()">
 								<div class="row form-row">
 									<div class="col-12 col-md-12">
 										<div class="form-group">
@@ -31,8 +40,8 @@
 												</div>
 												<div class="upload-img text-justify my-auto pl-5">
 													<div class="change-photo-btn border">
-														<span><i class="fa fa-upload"></i> Upload Photo</span> <input
-															type="file" class="upload" name="patientImage">
+														<input
+															type="file" class="upload" name="patientImage" id="fileUpload" value="Upload Image" accept=".jpg,.png,.gif,.jpeg">
 													</div>
 													<small class="form-text text-muted">Allowed JPG,
 														GIF or PNG. Max size of 2MB</small>
@@ -45,7 +54,8 @@
 											<label>First Name</label> <input type="text"
 												class="form-control"
 												value="
-                                        <%=session.getAttribute("patientFirstName")%>
+                                        <%=pProfile.getPatientFirstName()
+                                        %>
                                         "
 												name="patientFirstName">
 										</div>
@@ -55,7 +65,7 @@
 											<label>Last Name</label> <input type="text"
 												class="form-control"
 												value="
-                                        <%=session.getAttribute("patientLastName")%>
+                                        <%=pProfile.getPatientLastName()%>
                                         "
 												name="patientLastName">
 										</div>
@@ -66,7 +76,7 @@
 											<div class="cal-icon">
 												<input type="text" class="form-control datetimepicker"
 													value="
-                                            <%=session.getAttribute("patientDob")%>
+                                            <%=pProfile.getPatientDob()%>
                                             "
 													name="patientDob">
 											</div>
@@ -77,7 +87,7 @@
 											<label>Blood Group</label> <select
 												class="form-control select" name="patientBloodGroup">
 												<option>
-													<%=session.getAttribute("patientBloodGroup")%>
+													<%=pProfile.getPatientBloodGroup()%>
 												</option>
 												<option>A-</option>
 												<option>A+</option>
@@ -97,14 +107,14 @@
 												value="
                                         <%=session.getAttribute("patientEmail")%>
                                         "
-												name="patientEmail">
+												name="patientEmail" readonly="readonly">
 										</div>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="form-group">
 											<label>Mobile</label> <input type="text"
 												value="
-                                        <%=session.getAttribute("patientMobile")%>
+                                        <%=session.getAttribute("patientId")%>
                                         "
 												class="form-control" name="patientMobile">
 										</div>
@@ -114,7 +124,7 @@
 											<label>Address</label> <input type="text"
 												class="form-control"
 												value="
-                                        <%=session.getAttribute("patientAddress")%>
+                                        <%=pProfile.getPatientAddress()%>
                                         "
 												name="patientAddress">
 										</div>
@@ -123,7 +133,7 @@
 										<div class="form-group">
 											<label>City</label> <input type="text" class="form-control"
 												value="
-                                        <%=session.getAttribute("patientCity")%>
+                                        <%=pProfile.getPatientCity()%>
                                         "
 												name="patientCity">
 										</div>
@@ -132,7 +142,7 @@
 										<div class="form-group">
 											<label>State</label> <input type="text" class="form-control"
 												value="
-                                        <%=session.getAttribute("patientState")%>
+                                        <%=pProfile.getPatientState()%>
                                         "
 												name="patientState">
 										</div>
@@ -142,7 +152,7 @@
 											<label>Zip Code</label> <input type="text"
 												class="form-control"
 												value="
-                                        <%=session.getAttribute("patientZip")%>
+                                        <%=pProfile.getPatientZip()%>
                                         "
 												name="patientZip">
 										</div>
@@ -152,7 +162,7 @@
 											<label>Country</label> <input type="text"
 												class="form-control"
 												value="
-                                        <%=session.getAttribute("patientCountry")%>
+                                        <%=pProfile.getPatientCountry()%>
                                         "
 												name="patientCountry">
 										</div>

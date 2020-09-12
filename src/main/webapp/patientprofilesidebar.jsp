@@ -1,7 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="com.shravan.hms.model.PatientProfile"%>
+<%@page import="com.shravan.hms.model.Patient"%>
+<%@page import="com.shravan.hms.dao.PatientDao"%>
     
 <!DOCTYPE html>
+<%
+	PatientDao dao = new PatientDao();
+	PatientProfile pProfile = new PatientProfile();
+	Long mobile =(Long)session.getAttribute("patientId");
+	pProfile = dao.getPatientById(mobile).getPatientProfile();
+	%>
 		
             <!-- Profile Sidebar -->
             <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
@@ -12,10 +21,10 @@
                                 <img src="images/avatar.png" alt="User Image">
                             </a>
                             <div class="profile-det-info">
-                                <h3><%=session.getAttribute("patientFullName")%></h3>
+                                <h3><%=pProfile.getPatientFirstName()+" "+pProfile.getPatientLastName() %></h3>
                                 <div class="patient-details">
-                                    <h5><i class="fas fa-birthday-cake"></i><%=session.getAttribute("patientDob")%></h5>
-                                    <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i><%=session.getAttribute("patientState")+" , "+session.getAttribute("patientCountry")%></h5>
+                                    <h5><i class="fas fa-birthday-cake"></i><%=pProfile.getPatientDob()%></h5>
+                                    <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i><%=pProfile.getPatientState()+" , "+pProfile.getPatientCountry()%></h5>
                                 </div>
                             </div>
                         </div>
