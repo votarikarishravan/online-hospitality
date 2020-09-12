@@ -25,10 +25,10 @@
                             </div>
                             
                             <!-- Forgot Password Form -->
-                            <form action="reset_password">
+                            <form action="reset_password" onsubmit="return validateform()">
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Email</label>
-                                    <input type="email" class="form-control floating" name="email">
+                                    <input type="email" class="form-control floating" id="pemail" name="email" required>
                                     
                                 </div>
                                 <div class="text-right mb-2">

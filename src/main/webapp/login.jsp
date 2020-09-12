@@ -23,7 +23,8 @@
 								<img src="images/HMS-logo.png" class="img-fluid" alt="Doccure Login">
 							</div>
 							<div class="col-md-12 col-lg-6 login-right border rounded my-5">
-								<div class="login-header py-4">
+								<div>
+									<span class="text-danger" id="etag"></span>
 									<%
 									String msg = (String) request.getAttribute("message");
 										if (msg != null) {
@@ -32,11 +33,14 @@
 									<%
 										}
 									%>
+								</div>
+								<div class="login-header py-4">
+									
 									<h3>
 										Login <span>Here</span>
 									</h3>
 								</div>
-								<form action="PatientLogin" method="post" onsubmit="return validateform()">
+								<form action="PatientLogin" method="post" onsubmit="return ploginvalidate()">
 									<div class="form-group form-focus">
 									<label
 											class="focus-label">Email</label>

@@ -21,18 +21,22 @@
                             </div>
                             
                             <!-- Forgot Password Form -->
-                            <form action="ChangePassword" method="post">
+                            <form action="ChangePassword" method="post" onsubmit="return changePasswordValidate()">
                                 <div class="form-group form-focus">
-                                    <input type="number" class="form-control floating" name="mobile">
                                     <label class="focus-label">Mobile Number</label>
+                                    <input type="number" class="form-control floating" id="mobnum" name="mobile">
+                                   
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="password" class="form-control floating" name="npassword">
                                     <label class="focus-label">New Password</label>
+                                    <input type="password" class="form-control floating" name="npassword" id="password">
+                                    
                                 </div>
+                                <div class="my-2"><span class="text-danger" id="etag"></span></div>
                                 <div class="form-group form-focus">
-                                    <input type="password" class="form-control floating" name="cpassword">
                                     <label class="focus-label">Confirm Password</label>
+                                    <input type="password" class="form-control floating" name="cpassword" id="confirmPassword">
+                                    
                                 </div>
                                 <button class="btn btn-primary btn-block btn-lg " type="submit">Reset Password</button>
                             </form>

@@ -44,12 +44,12 @@
 			<div class="collapse" id="collapse<%=id%>">
 				<div class="card card-body">
 					<h4>patient mobile number</h4>
-                  <input type="number" name="mobile">
+                  <input type="number" name="mobile" required>
                   <hr>
                   <h4>Choose Date and Time</h4>
-					<input type="date" name="date"> 
+					<input type="date" name="date" required> 
 					<select
-						class="form-control select my-2" name="time">
+						class="form-control select my-2" name="time" required>
 						<option>choose time slot</option>
 						<option>09:00-10:00</option>
 						<option>10:00-11:00</option>

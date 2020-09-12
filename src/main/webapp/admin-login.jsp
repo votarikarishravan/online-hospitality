@@ -20,14 +20,16 @@
 						Login <span>Here</span>
 					</h3>
 				</div>
-				<form action="AdminLogin" method="post">
+				<form action="AdminLogin" method="post" onsubmit="return adminValidation()">
 					<div class="form-group form-focus">
-						<input type="text" class="form-control floating" name="username" required="required"> 
 						<label class="focus-label">UserName</label>
+						<input type="text" class="form-control floating" name="username" required="required"> 
+						
 					</div>
 					<div class="form-group form-focus">
-						<input type="password" class="form-control floating" name="password" required="required"> 
 						<label class="focus-label">Password</label>
+						<input type="password" class="form-control floating" name="password" required="required"> 
+						
 					</div>
 					<div class="text-right">
 						<a class="forgot-link" href="forgot-password.html">Forgot
