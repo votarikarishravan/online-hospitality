@@ -4,7 +4,7 @@
 <html>
 <jsp:include page="header.jsp"></jsp:include>
 <body>
-<jsp:include page="navbar-admin.jsp"></jsp:include>
+<jsp:include page="navbar.jsp"></jsp:include>
 <div class="content">
 		<div class="container-fluid">
 

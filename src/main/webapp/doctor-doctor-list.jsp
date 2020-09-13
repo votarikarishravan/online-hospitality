@@ -10,7 +10,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <body>
 
-	<jsp:include page="navbar-doctor.jsp"></jsp:include>
+	<jsp:include page="navbar.jsp"></jsp:include>
 
 	<!-- Page Content -->
 	<div class="content">

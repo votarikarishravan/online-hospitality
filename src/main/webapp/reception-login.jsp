@@ -28,12 +28,14 @@
 
 					</div>
 					<div class="form-group form-focus">
-						<input type="number" class="form-control floating" name="id" required="required">
 						<label class="focus-label">Id</label>
+						<input type="number" class="form-control floating" name="id" required="required">
+						
 					</div>
 					<div class="form-group form-focus">
+					 <label class="focus-label">Password</label>
 						<input type="password" class="form-control floating"
-							name="password" required="required"> <label class="focus-label">Password</label>
+							name="password" required="required">
 					</div>
 					<button class="btn btn-primary btn-block btn-lg login-btn"
 						type="submit">Login</button>

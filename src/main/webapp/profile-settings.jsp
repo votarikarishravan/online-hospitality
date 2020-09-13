@@ -8,7 +8,7 @@
 <html>
 <jsp:include page="header.jsp"></jsp:include>
 <body>
-	<jsp:include page="navbar-patient.jsp"></jsp:include>
+	<jsp:include page="navbar.jsp"></jsp:include>
 	<%
 	PatientDao dao = new PatientDao();
 	PatientProfile pProfile = new PatientProfile();

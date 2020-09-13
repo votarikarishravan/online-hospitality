@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.shravan.hms.dao.DoctorDao;
 import com.shravan.hms.dao.ReceptionDao;
@@ -41,23 +42,36 @@ public class DoctorLogin extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String password = request.getParameter("password");
 
+		HttpSession session = request.getSession();
+
 		if (username.equals("Doctor")) {
-			if (dao.validate(id, password)) {
-				request.getSession().setAttribute("doctorId", id);
-				request.getRequestDispatcher("doctor-dashboard.jsp").forward(request, response);
+			if (session.getAttribute("LOGIN") == null) {
+				if (dao.validate(id, password)) {
+					session.setAttribute("LOGIN", "DOCTOR");
+					request.getSession().setAttribute("doctorId", id);
+					request.getRequestDispatcher("doctor-dashboard.jsp").forward(request, response);
+				} else {
+					request.setAttribute("dmessage", "incorrect login credentials");
+					request.getRequestDispatcher("doctor-login.jsp").forward(request, response);
+				}
 			} else {
-				request.setAttribute("dmessage", "please make sure authorized credentials");
+				request.setAttribute("dmessage", "you are already logged in this machine...");
 				request.getRequestDispatcher("doctor-login.jsp").forward(request, response);
 			}
 		} else {
-			if (rDao.validate(id, password)) {
-				request.getSession().setAttribute("receptionId", id);
-				request.getRequestDispatcher("reception.jsp").forward(request, response);
+			if (session.getAttribute("LOGIN") == null) {
+				if (rDao.validate(id, password)) {
+					session.setAttribute("LOGIN", "RECEPTIONIST");
+					request.getSession().setAttribute("receptionId", id);
+					request.getRequestDispatcher("reception.jsp").forward(request, response);
+				} else {
+					request.setAttribute("dmessage", "incorrect login credentials");
+					request.getRequestDispatcher("reception-login.jsp").forward(request, response);
+				}
 			} else {
-				request.setAttribute("dmessage", "please make sure authorized credentials");
+				request.setAttribute("dmessage", "you are already logged in this machine...");
 				request.getRequestDispatcher("reception-login.jsp").forward(request, response);
 			}
 		}
 	}
-
 }
