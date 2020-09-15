@@ -27,14 +27,14 @@
 							Dr.<input class="border-0  text-info" readonly="readonly"
 								value="<%=d.getName()%>">
 						</h4>
-						<p class="">Timings : 00:00 AM - 00-00 PM</p>
+						<p class="">Timings : 09:00 AM - 12-00 PM</p>
 						<h5 class="doc-department"><%=d.getSpeciality()%></h5>
 					</div>
 				</div>
 				<div class="doc-info-right my-auto">
 					<div class="clinic-booking">
-						<a class="btn btn-info mb-3" href="doctor-profile.html">View
-							Profile</a> <a class="btn btn-primary" data-toggle="collapse"
+						<!-- <a class="btn btn-info mb-3" href="doctor-profile.html">View
+							Profile</a> --> <a class="btn btn-primary" data-toggle="collapse"
 							href="#collapse<%=id%>">Book Appointment</a>
 
 					</div>

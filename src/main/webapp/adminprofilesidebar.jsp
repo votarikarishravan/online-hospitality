@@ -18,7 +18,7 @@
 					<h3>Administrator</h3>
 					<div class="patient-details">
 						<h5>
-							<i class="fas fa-birthday-cake"></i>Birth Date
+							<i class="fas fa-birthday-cake"></i>Date of Birth
 						</h5>
 						<h5 class="mb-0">
 							<i class="fas fa-map-marker-alt"></i>Address
@@ -109,7 +109,7 @@
 							<i class="fas fa-user-cog"></i> <span class="text-primary">Patients</span>
 					</a></li>
 					<li class="list-group-item"><a
-						href="change-patient-password.jsp"> <i class="fas fa-lock"></i>
+						href="#"> <i class="fas fa-lock"></i>
 							<span class="text-primary">Change Password</span>
 					</a></li>
 

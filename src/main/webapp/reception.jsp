@@ -103,7 +103,7 @@
 							<div class="p-2" style="display: inline-flex;">
 								<div class="pr-1">
 									
-										<a href="#" class="text-white btn btn-info">Registration</a>
+										<a href="register.jsp" class="text-white btn btn-info">Registration</a>
 									
 								</div>
 								<div>

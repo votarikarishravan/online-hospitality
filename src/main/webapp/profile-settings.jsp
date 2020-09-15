@@ -13,8 +13,23 @@
 	PatientDao dao = new PatientDao();
 	PatientProfile pProfile = new PatientProfile();
 	Long mobile =(Long)session.getAttribute("patientId");
+	String email =(String)session.getAttribute("patientEmail");
+	String empty ="-NA-";
+	
 	pProfile = dao.getPatientById(mobile).getPatientProfile();
-	%>
+	
+	String fname = pProfile.getPatientFirstName();
+	String lname = pProfile.getPatientLastName();
+	
+	String dob = pProfile.getPatientDob();
+	String bgroup = pProfile.getPatientBloodGroup();
+	String address = pProfile.getPatientAddress();
+    String city = pProfile.getPatientCity();
+    String state = pProfile.getPatientState();
+    String zip = pProfile.getPatientZip();
+    String country = pProfile.getPatientCountry();
+    
+	 %>
 
 	<!-- Page Content -->
 	<div class="content">
@@ -53,10 +68,12 @@
 										<div class="form-group">
 											<label>First Name</label> <input type="text"
 												class="form-control"
-												value="
-                                        <%=pProfile.getPatientFirstName()
-                                        %>
-                                        "
+												
+												<%if(fname!=null){ %>
+                                        		value="<%=fname.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty.stripLeading()%>"
+                                        		<%} %>
 												name="patientFirstName">
 										</div>
 									</div>
@@ -64,9 +81,11 @@
 										<div class="form-group">
 											<label>Last Name</label> <input type="text"
 												class="form-control"
-												value="
-                                        <%=pProfile.getPatientLastName()%>
-                                        "
+												<%if(lname!=null){ %>
+                                        		value="<%=lname.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
 												name="patientLastName">
 										</div>
 									</div>
@@ -75,9 +94,12 @@
 											<label>Date of Birth</label>
 											<div class="cal-icon">
 												<input type="text" class="form-control datetimepicker"
-													value="
-                                            <%=pProfile.getPatientDob()%>
-                                            "
+													
+                                            <%if(dob!=null){ %>
+                                        		value="<%=dob.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
 													name="patientDob">
 											</div>
 										</div>
@@ -87,7 +109,11 @@
 											<label>Blood Group</label> <select
 												class="form-control select" name="patientBloodGroup">
 												<option>
-													<%=pProfile.getPatientBloodGroup()%>
+													<%if(bgroup!=null){ %>
+                                        		<%=bgroup.trim()%>
+                                        		<%}else{ %>
+                                        		<%=empty %>
+                                        		<%} %>
 												</option>
 												<option>A-</option>
 												<option>A+</option>
@@ -104,45 +130,53 @@
 										<div class="form-group">
 											<label>Email ID</label> <input type="email"
 												class="form-control"
-												value="
-                                        <%=session.getAttribute("patientEmail")%>
-                                        "
+												value="<%=email.strip() %>"
 												name="patientEmail" readonly="readonly">
 										</div>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="form-group">
 											<label>Mobile</label> <input type="text"
-												value="
-                                        <%=session.getAttribute("patientId")%>
-                                        "
-												class="form-control" name="patientMobile">
+												value="<%=mobile %>"
+												class="form-control" name="patientMobile" readonly="readonly">
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group">
 											<label>Address</label> <input type="text"
 												class="form-control"
-												value="
-                                        <%=pProfile.getPatientAddress()%>
-                                        "
+												
+												<%if(address!=null){ %>
+                                        		value="<%=address.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
+												
 												name="patientAddress">
 										</div>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="form-group">
 											<label>City</label> <input type="text" class="form-control"
-												value="
-                                        <%=pProfile.getPatientCity()%>
-                                        "
+												
+                                        <%if(city!=null){ %>
+                                        		value="<%=city.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
+                                        
 												name="patientCity">
 										</div>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="form-group">
 											<label>State</label> <input type="text" class="form-control"
-												value="
-                                        <%=pProfile.getPatientState()%>
+												
+                                        <%if(state!=null){ %>
+                                        		value="<%=state.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
                                         "
 												name="patientState">
 										</div>
@@ -151,8 +185,12 @@
 										<div class="form-group">
 											<label>Zip Code</label> <input type="text"
 												class="form-control"
-												value="
-                                        <%=pProfile.getPatientZip()%>
+												
+                                        <%if(zip!=null){ %>
+                                        		value="<%=zip.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
                                         "
 												name="patientZip">
 										</div>
@@ -161,8 +199,12 @@
 										<div class="form-group">
 											<label>Country</label> <input type="text"
 												class="form-control"
-												value="
-                                        <%=pProfile.getPatientCountry()%>
+												
+                                        <%if(country!=null){ %>
+                                        		value="<%=country.trim()%>"
+                                        		<%}else{ %>
+                                        		value="<%=empty %>"
+                                        		<%} %>
                                         "
 												name="patientCountry">
 										</div>

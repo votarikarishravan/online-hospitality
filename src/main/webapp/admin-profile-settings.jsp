@@ -38,26 +38,20 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>First Name</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("FirstName")%>
-                                        " name="FirstName">
+                                        <input type="text" class="form-control" value="--" name="FirstName">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Last Name</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("LastName")%>
-                                        " name="LastName">
+                                        <input type="text" class="form-control" value="--" name="LastName">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Date of Birth</label>
                                         <div class="cal-icon">
-                                            <input type="text" class="form-control datetimepicker" value="
-                                            <%=session.getAttribute("Dob")%>
-                                            " name="Dob">
+                                            <input type="text" class="form-control datetimepicker" value="--" name="Dob">
                                         </div>
                                     </div>
                                 </div>
@@ -65,9 +59,7 @@
                                     <div class="form-group">
                                         <label>Blood Group</label>
                                         <select class="form-control select" name="BloodGroup">
-                                            <option>
-                                            <%=session.getAttribute("BloodGroup")%>
-                                            </option>
+                                            <option>--</option>
                                             <option>A-</option>
                                             <option>A+</option>
                                             <option>B-</option>
@@ -82,57 +74,43 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Email ID</label>
-                                        <input type="email" class="form-control" value="
-                                        <%=session.getAttribute("Email")%>
-                                        " name="Email">
+                                        <input type="email" class="form-control" value="--" name="Email">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Mobile</label>
-                                        <input type="text" value="
-                                        <%=session.getAttribute("Mobile")%>
-                                        " class="form-control" name="Mobile">
+                                        <input type="text" value="--" class="form-control" name="Mobile">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                     <label>Address</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("Address")%>
-                                        " name="Address">
+                                        <input type="text" class="form-control" value="--" name="Address">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>City</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("City")%>
-                                        " name="City">
+                                        <input type="text" class="form-control" value="--" name="City">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>State</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("State")%>
-                                        " name="State">
+                                        <input type="text" class="form-control" value="--" name="State">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Zip Code</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("Zip")%>
-                                        " name="Zip">
+                                        <input type="text" class="form-control" value="--" name="Zip">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Country</label>
-                                        <input type="text" class="form-control" value="
-                                        <%=session.getAttribute("Country") %>
-                                        " name="Country">
+                                        <input type="text" class="form-control" value="--" name="Country">
                                     </div>
                                 </div>
                             </div>
