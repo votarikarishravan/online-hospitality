@@ -93,3 +93,22 @@ function profileValidation() {
         return false;
     }
 }
+
+function validateRegisterForm(){
+	var msg = document.getElementById("etag");
+	var name = document.getElementById("name").value;
+	var mobile = document.getElementById("mobile").value;
+	var password = document.getElementById("password").value;
+	var confirmPassword = document.getElementById("confirmPassword").value;
+	
+	if (name.length > 26) {
+		msg.innerHTML = "name should not be morethan 26 digits";
+		return false;
+	} else if (mobile.length > 10 || isNaN(mobile)) {
+		msg.innerHTML = "please enter 10 digit mobile number";
+		return false;
+	} else if (password != confirmPassword) {
+		alert("Passwords do not match.");
+		return false;
+	}
+}

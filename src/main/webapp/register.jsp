@@ -36,35 +36,35 @@
 
 								<!-- Register Form -->
 								<form action="RegisterPatient" method="post"
-									onsubmit="return validateform()">
+									onsubmit="return validateRegisterForm()">
 									<div class="form-group form-focus">
-									<label class="focus-label">Name</label>
-										<input type="text" class="form-control floating" name="name"
-											required="required"> 
+										<label class="focus-label">Name</label> <input type="text"
+											class="form-control floating" name="name" id="name"
+											required="required">
 									</div>
 									<div class="form-group form-focus">
-									<label
-											class="focus-label">Mobile Number</label>
-										<input type="text" class="form-control floating"
-											required="required" name="mobileNumber"> 
+										<label class="focus-label">Mobile Number</label> <input
+											type="text" class="form-control floating" id="mobile"
+											required="required" name="mobileNumber">
 									</div>
 									<div class="form-group form-focus">
-									 <label
-											class="focus-label">Email Id</label>
-										<input type="email" class="form-control floating" name="email"
+										<label class="focus-label">Email Id</label> <input
+											type="email" class="form-control floating" name="email"
 											id="pemail" required="required">
 									</div>
 									<div class="form-group form-focus">
-									<label
-											class="focus-label">Create Password</label>
-										<input type="password" class="form-control floating"
-											required="required" id="ppassword" name="password"> 
+										<label class="focus-label">Create Password</label> <input
+											type="password" class="form-control floating"
+											required="required" id="password" name="password">
 									</div>
 									<div class="form-group form-focus">
-									<label class="focus-label">Confirm Password</label>
-										<input type="password" class="form-control floating"
-											required="required" id="pConfirmPassword">
-										
+										<label class="focus-label">Confirm Password</label> <input
+											type="password" class="form-control floating"
+											required="required" id="confirmPassword">
+
+									</div>
+									<div>
+										<span class="text-danger" id="etag"></span>
 									</div>
 									<div class="text-right">
 										<a class="forgot-link" href="login.jsp">Already have an
