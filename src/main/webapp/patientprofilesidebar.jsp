@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <%
-	String empty = "NA";
+	String empty = "--";
 	PatientDao dao = new PatientDao();
 	PatientProfile pProfile = new PatientProfile();
 	Long mobile = (Long) session.getAttribute("patientId");

@@ -72,7 +72,7 @@
 												<%if(fname!=null){ %>
                                         		value="<%=fname.trim()%>"
                                         		<%}else{ %>
-                                        		value="<%=empty.stripLeading()%>"
+                                        		value="<%=empty%>"
                                         		<%} %>
 												name="patientFirstName">
 										</div>
@@ -130,7 +130,7 @@
 										<div class="form-group">
 											<label>Email ID</label> <input type="email"
 												class="form-control"
-												value="<%=email.strip() %>"
+												value="<%=email %>"
 												name="patientEmail" readonly="readonly">
 										</div>
 									</div>
